@@ -155,4 +155,8 @@ node tests/browser-sillage.mjs   # the API end to end, in headless Chrome
 
 ## Licence
 
-Sillage 3D is not open source yet. The code and scenes in this repository are © 2026 wrong-nebula, all rights reserved; see [LICENSE.md](LICENSE.md). Bundled work by other authors keeps its own licence, listed in the [third-party notices](docs/third-party-notices.md).
+Sillage 3D is free to use, change and share for any noncommercial purpose, under the [PolyForm Noncommercial License 1.0.0](LICENSE.md). That includes personal projects, study, research, and use by schools, charities and public institutions.
+
+Commercial use is not covered. To ask about it, [open an issue](https://github.com/wrong-nebula/sillage3D/issues).
+
+© 2026 wrong-nebula; see [NOTICE.md](NOTICE.md). Bundled work by other authors keeps its own licence, listed in the [third-party notices](docs/third-party-notices.md).

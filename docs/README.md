@@ -11,6 +11,7 @@ Start with the first two. The reference is one file on purpose: it is what `sill
 | [Physics](splat-physics.md) | The splat physics lab: rigid rocks, cloth, water, fire, and ground materials such as sand and snow. |
 | [Release notes](../CHANGELOG.md) | What each release contains and what changed. |
 | [Third-party notices](third-party-notices.md) | Code and assets from other authors, with licences and sources. |
+| [Licence](../LICENSE.md) and [notice](../NOTICE.md) | Free for noncommercial use: the PolyForm Noncommercial License 1.0.0. |
 
 ## Where to look for what
 

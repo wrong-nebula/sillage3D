@@ -2,7 +2,7 @@
   "name": "sillage",
   "version": "0.1.0-alpha.1",
   "description": "A browser-based 3D Gaussian splat engine that draws every splat as a brush mark. API, CLI and MCP server.",
-  "license": "UNLICENSED",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "homepage": "https://sillage3d.vercel.app",
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 # Third-party notices
 
-Sillage 3D includes code adapted from, and assets made by, other authors. Each keeps its own licence. The records named in the tables are files in this repository and hold the exact sources, checksums and processing notes.
+Sillage 3D includes code adapted from, and assets made by, other authors. Each keeps its own licence, not the [PolyForm Noncommercial licence](../LICENSE.md) that covers the rest of the repository. The records named in the tables are files in this repository and hold the exact sources, checksums and processing notes.
 
 ## Assets
 
