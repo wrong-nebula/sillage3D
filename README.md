@@ -8,9 +8,23 @@
 
 A 3D engine for the browser that draws every Gaussian splat as a brush mark. Scenes are real 3D, so you can orbit them, light them and move through them, and every frame still reads as a painting.
 
-**Alpha `0.1.0-alpha.1`** · [Live demos](https://sillage3d.vercel.app) · [Release notes](CHANGELOG.md) · [Getting started](docs/getting-started.md) · [Reference](AGENTS.md)
+**Alpha `0.1.0-alpha.1`** · [Live demos](https://sillage3d.vercel.app) · [Release notes](CHANGELOG.md) · [Getting started](docs/getting-started.md) · [Prompting](docs/prompting.md) · [Reference](AGENTS.md)
 
 The image above is one frame from the engine: the built-in `hollow-reef` scene, rendered from the command line.
+
+## What it is for
+
+Sillage is a specialised engine, not a general one. It does one thing that mesh engines such as Three.js do poorly: **scenes that look painted, and stay painted when the camera moves.**
+
+A mesh engine draws triangles with materials. Toon shading keeps the hard silhouette of the geometry, and a painterly filter over the finished frame belongs to the screen, so its strokes slide or flicker as the view changes. In Sillage the brush marks are the geometry: each one is a small 3D Gaussian with its own place, direction and size in the world, so marks overlap, break an edge, and hold still as you orbit.
+
+| Use it for | Use a mesh engine for |
+|---|---|
+| Gouache, oil and watercolour scenes in real 3D | Photorealism and physically based materials |
+| Stylised levels, dioramas, backdrops, characters and props built from simple volumes | Rigged characters, mesh pipelines, a general game engine |
+| Painted atmosphere: mist, smoke, fire, dusk | Hard, clean edges, lettering, fine mechanical detail |
+
+[Prompting Sillage](docs/prompting.md) has worked example prompts for level, character, environment and prop design.
 
 ## Demo scenes
 
@@ -117,6 +131,7 @@ Every error carries a stable `code` and a `hint` that says what to send instead.
 | | |
 |---|---|
 | [Getting started](docs/getting-started.md) | Install, draw a built-in scene, write and check a scene of your own. |
+| [Prompting Sillage](docs/prompting.md) | What the engine is for, how to brief a model, and example prompts with their results for level, character, environment and prop design. |
 | [Reference](AGENTS.md) | Every command, the scene format, render options, the JavaScript API, states and error codes. Written for people and for agents; `sillage guide` prints it. |
 | [How the rendering works](docs/gaussian-brush-method.md) | How a Gaussian splat becomes a brush mark, with measurements. |
 | [Physics](docs/splat-physics.md) | The splat physics lab: rocks, cloth, water and ground materials. |

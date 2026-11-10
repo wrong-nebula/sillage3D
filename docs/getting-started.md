@@ -98,6 +98,7 @@ The working loop is: edit the JSON, `inspect`, `render`, look, repeat. Frames ar
   claude mcp add sillage -- node "/absolute/path/to/sillage3D/cli/sillage.mjs" mcp
   ```
 
+- **Briefing a model well.** [Prompting Sillage](prompting.md) has the working method to give it and example prompts for levels, characters, environments and props.
 - **Into another viewer.** `node cli/sillage.mjs export scenes/still.json -o still.splat` writes a standard `.splat` file. The brush styling is the renderer's and is not part of the file.
 
 When something goes wrong, the error has a `code` and a `hint`. The [reference](../AGENTS.md) lists every code, and what state each part of the system can be in.

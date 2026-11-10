@@ -558,3 +558,18 @@ test('scenes kept on this machine are not in the catalog, the guides or the ship
   // The guide's count is the catalog's.
   assert.match(readFileSync(join(ROOT, 'AGENTS.md'), 'utf8'), new RegExp(`the ${ids.length} built-in scenes`));
 });
+
+test('the example scenes in the prompting guide are valid, clean and linked', () => {
+  const folder = join(ROOT, 'docs', 'examples'), guide = readFileSync(join(ROOT, 'docs', 'prompting.md'), 'utf8');
+  const files = readdirSync(folder).filter(file => file.endsWith('.json'));
+  assert.ok(files.length >= 4);
+  for (const file of files) {
+    const report = inspectScene(JSON.parse(readFileSync(join(folder, file), 'utf8')));
+    assert.deepEqual([report.valid, report.errors, report.warnings], [true, [], []], file);
+    assert.ok(report.splats > 1000 && report.splats < 60000, `${file}: ${report.splats} marks`);
+    assert.ok(guide.includes(`(examples/${file})`), `${file} is linked from the guide`);
+    // The guide states each example's size: it must be the document's.
+    const stated = new RegExp(`examples/${file.replace('.', '\\.')}\\)[^\\n]*?(\\d+) items`).exec(guide);
+    assert.equal(Number(stated?.[1]), report.items.length, `${file}: item count in the guide`);
+  }
+});

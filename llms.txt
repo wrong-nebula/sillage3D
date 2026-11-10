@@ -7,6 +7,7 @@ Start with AGENTS.md: it covers every command, the scene document format, the re
 ## Docs
 
 - [Agent guide](AGENTS.md): command line, MCP, scene documents, render options, JavaScript API, error codes, limits.
+- [Prompting Sillage](docs/prompting.md): what the engine is for, the working method for a model, and example prompts with results; scene documents in docs/examples/.
 - [Rendering method](docs/gaussian-brush-method.md): how splats become brush marks.
 - [Physics](docs/splat-physics.md): the splat physics lab.
 - [README](README.md): the studios and scenes, in prose.

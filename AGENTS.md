@@ -4,6 +4,10 @@ Sillage is a browser-based 3D Gaussian splat engine in which every splat is draw
 
 Everything below is one API seen four ways. The same eight tools back the command line, the MCP server and `sillage tools`; the same `Sillage` class backs the page and the headless session.
 
+## What it is for
+
+Sillage is a specialised engine: it draws scenes that look painted and stay painted as the camera moves, which mesh engines do poorly. Use it for stylised, non-photorealistic scenes built from simple volumes. Do not use it for photorealism, hard edges, lettering or rigged characters. `docs/prompting.md` has the working method and example prompts for level, character, environment and prop design, with scene documents in `docs/examples/`.
+
 ## Start here
 
 ```sh
@@ -276,7 +280,7 @@ Environment: `NO_SERVER`, `NO_BROWSER`, `NO_WEBGL`, `ASSET_ERROR`, `PAGE_TIMEOUT
 | `tests/sillage-api.test.js`, `tests/browser-sillage.mjs` | Checks without and with a browser. |
 
 ```sh
-npm run test:sillage             # 23 checks, no browser, about 2 seconds
+npm run test:sillage             # 24 checks, no browser, about 2 seconds
 node tests/browser-sillage.mjs   # end to end in headless Chrome
 npm test                         # everything that needs no browser
 ```

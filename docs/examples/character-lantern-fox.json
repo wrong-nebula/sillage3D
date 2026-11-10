@@ -1,0 +1,563 @@
+{
+  "sillage": 1,
+  "title": "Lantern fox",
+  "description": "A small fox spirit standing with a lantern: a character sheet pose on a plain ground.",
+  "background": "#42566b",
+  "seed": 11,
+  "camera": {
+    "position": [
+      2.1,
+      2.2,
+      7.9
+    ],
+    "target": [
+      0.1,
+      1.25,
+      0
+    ],
+    "fov": 30
+  },
+  "light": [
+    -0.7,
+    1.1,
+    0.9
+  ],
+  "style": {
+    "mode": "gouache",
+    "softness": 0.16
+  },
+  "content": [
+    {
+      "id": "ground",
+      "type": "disc",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "radius": 2.6,
+      "color": [
+        "#34455a",
+        "#51667f",
+        "#7d92a8"
+      ],
+      "stroke": {
+        "direction": "around"
+      }
+    },
+    {
+      "id": "body",
+      "type": "ellipsoid",
+      "center": [
+        0,
+        1.0,
+        0
+      ],
+      "radii": [
+        0.6,
+        0.78,
+        0.54
+      ],
+      "color": [
+        "#7a3414",
+        "#c2591f",
+        "#e88b3a",
+        "#f6b871"
+      ],
+      "stroke": {
+        "direction": "up",
+        "spread": 14
+      }
+    },
+    {
+      "id": "belly",
+      "type": "ellipsoid",
+      "center": [
+        0,
+        0.92,
+        0.3
+      ],
+      "radii": [
+        0.36,
+        0.5,
+        0.3
+      ],
+      "color": [
+        "#b9a58c",
+        "#e6d8bf",
+        "#f8f0df"
+      ],
+      "stroke": {
+        "direction": "up",
+        "spread": 10
+      }
+    },
+    {
+      "id": "head",
+      "type": "ellipsoid",
+      "center": [
+        0,
+        2.05,
+        0.05
+      ],
+      "radii": [
+        0.6,
+        0.52,
+        0.55
+      ],
+      "color": [
+        "#7a3414",
+        "#c2591f",
+        "#e88b3a",
+        "#f6b871"
+      ],
+      "stroke": {
+        "direction": "around"
+      }
+    },
+    {
+      "id": "muzzle",
+      "type": "ellipsoid",
+      "center": [
+        0,
+        1.92,
+        0.5
+      ],
+      "radii": [
+        0.27,
+        0.2,
+        0.27
+      ],
+      "color": [
+        "#b9a58c",
+        "#e6d8bf",
+        "#f8f0df"
+      ]
+    },
+    {
+      "id": "nose",
+      "type": "ellipsoid",
+      "center": [
+        0,
+        1.97,
+        0.76
+      ],
+      "radius": 0.07,
+      "color": "#1b1410",
+      "unlit": true
+    },
+    {
+      "id": "eye-left",
+      "type": "ellipsoid",
+      "center": [
+        -0.25,
+        2.15,
+        0.56
+      ],
+      "radius": 0.07,
+      "color": "#1b1410",
+      "unlit": true
+    },
+    {
+      "id": "eye-right",
+      "type": "ellipsoid",
+      "center": [
+        0.25,
+        2.15,
+        0.56
+      ],
+      "radius": 0.07,
+      "color": "#1b1410",
+      "unlit": true
+    },
+    {
+      "id": "ear-left",
+      "type": "cone",
+      "base": [
+        -0.36,
+        2.4,
+        0
+      ],
+      "radius": 0.21,
+      "height": 0.52,
+      "axis": [
+        -0.25,
+        1,
+        0
+      ],
+      "color": [
+        "#7a3414",
+        "#c2591f",
+        "#e88b3a",
+        "#f6b871"
+      ]
+    },
+    {
+      "id": "ear-right",
+      "type": "cone",
+      "base": [
+        0.36,
+        2.4,
+        0
+      ],
+      "radius": 0.21,
+      "height": 0.52,
+      "axis": [
+        0.25,
+        1,
+        0
+      ],
+      "color": [
+        "#7a3414",
+        "#c2591f",
+        "#e88b3a",
+        "#f6b871"
+      ]
+    },
+    {
+      "id": "scarf",
+      "type": "tube",
+      "path": [
+        [
+          0.46,
+          1.66,
+          0.02
+        ],
+        [
+          0.372,
+          1.66,
+          0.29
+        ],
+        [
+          0.142,
+          1.66,
+          0.457
+        ],
+        [
+          -0.142,
+          1.66,
+          0.457
+        ],
+        [
+          -0.372,
+          1.66,
+          0.29
+        ],
+        [
+          -0.46,
+          1.66,
+          0.02
+        ],
+        [
+          -0.372,
+          1.66,
+          -0.25
+        ],
+        [
+          -0.142,
+          1.66,
+          -0.417
+        ],
+        [
+          0.142,
+          1.66,
+          -0.417
+        ],
+        [
+          0.372,
+          1.66,
+          -0.25
+        ],
+        [
+          0.46,
+          1.66,
+          0.02
+        ]
+      ],
+      "radius": 0.13,
+      "color": [
+        "#1f5560",
+        "#2f8a94",
+        "#7cc7c4"
+      ]
+    },
+    {
+      "id": "scarf-tail",
+      "type": "tube",
+      "path": [
+        [
+          -0.3,
+          1.62,
+          0.36
+        ],
+        [
+          -0.42,
+          1.3,
+          0.46
+        ],
+        [
+          -0.36,
+          1.02,
+          0.5
+        ]
+      ],
+      "radius": [
+        0.12,
+        0.1,
+        0.07
+      ],
+      "color": [
+        "#1f5560",
+        "#2f8a94",
+        "#7cc7c4"
+      ]
+    },
+    {
+      "id": "leg-left",
+      "type": "tube",
+      "path": [
+        [
+          -0.27,
+          0.42,
+          0.04
+        ],
+        [
+          -0.29,
+          0.08,
+          0.1
+        ]
+      ],
+      "radius": [
+        0.19,
+        0.16
+      ],
+      "color": [
+        "#4a2412",
+        "#7a3414",
+        "#c2591f"
+      ],
+      "caps": "end"
+    },
+    {
+      "id": "leg-right",
+      "type": "tube",
+      "path": [
+        [
+          0.27,
+          0.42,
+          0.04
+        ],
+        [
+          0.29,
+          0.08,
+          0.1
+        ]
+      ],
+      "radius": [
+        0.19,
+        0.16
+      ],
+      "color": [
+        "#4a2412",
+        "#7a3414",
+        "#c2591f"
+      ],
+      "caps": "end"
+    },
+    {
+      "id": "arm-left",
+      "type": "tube",
+      "path": [
+        [
+          -0.52,
+          1.38,
+          0.08
+        ],
+        [
+          -0.72,
+          1.05,
+          0.22
+        ],
+        [
+          -0.66,
+          0.82,
+          0.36
+        ]
+      ],
+      "radius": [
+        0.15,
+        0.13,
+        0.11
+      ],
+      "color": [
+        "#7a3414",
+        "#c2591f",
+        "#e88b3a",
+        "#f6b871"
+      ],
+      "caps": "end"
+    },
+    {
+      "id": "arm-right",
+      "type": "tube",
+      "path": [
+        [
+          0.52,
+          1.38,
+          0.08
+        ],
+        [
+          0.84,
+          1.3,
+          0.34
+        ],
+        [
+          1.02,
+          1.42,
+          0.52
+        ]
+      ],
+      "radius": [
+        0.15,
+        0.13,
+        0.11
+      ],
+      "color": [
+        "#7a3414",
+        "#c2591f",
+        "#e88b3a",
+        "#f6b871"
+      ],
+      "caps": "end"
+    },
+    {
+      "id": "tail",
+      "type": "tube",
+      "path": [
+        [
+          -0.25,
+          0.62,
+          -0.4
+        ],
+        [
+          -0.8,
+          0.55,
+          -0.8
+        ],
+        [
+          -1.2,
+          0.9,
+          -0.95
+        ],
+        [
+          -1.3,
+          1.45,
+          -0.8
+        ]
+      ],
+      "radius": [
+        0.16,
+        0.3,
+        0.34,
+        0.2
+      ],
+      "color": [
+        "#7a3414",
+        "#c2591f",
+        "#e88b3a",
+        "#f6b871"
+      ],
+      "stroke": {
+        "direction": "along"
+      }
+    },
+    {
+      "id": "tail-tip",
+      "type": "ellipsoid",
+      "center": [
+        -1.3,
+        1.66,
+        -0.74
+      ],
+      "radii": [
+        0.2,
+        0.26,
+        0.2
+      ],
+      "color": [
+        "#b9a58c",
+        "#e6d8bf",
+        "#f8f0df"
+      ]
+    },
+    {
+      "id": "lantern-cord",
+      "type": "tube",
+      "path": [
+        [
+          1.02,
+          1.42,
+          0.52
+        ],
+        [
+          1.03,
+          1.22,
+          0.53
+        ]
+      ],
+      "radius": 0.02,
+      "color": "#2a2019"
+    },
+    {
+      "id": "lantern-cap",
+      "type": "cone",
+      "base": [
+        1.03,
+        1.14,
+        0.53
+      ],
+      "radius": 0.2,
+      "height": 0.14,
+      "color": [
+        "#2a2019",
+        "#4a3a2c",
+        "#7a6650"
+      ],
+      "material": "metal"
+    },
+    {
+      "id": "lantern-glow",
+      "type": "cylinder",
+      "base": [
+        1.03,
+        0.8,
+        0.53
+      ],
+      "radius": 0.15,
+      "height": 0.34,
+      "color": [
+        "#ffb53a",
+        "#ffe58a",
+        "#fff6d2"
+      ],
+      "unlit": true
+    },
+    {
+      "id": "lantern-base",
+      "type": "cylinder",
+      "base": [
+        1.03,
+        0.74,
+        0.53
+      ],
+      "radius": 0.18,
+      "height": 0.07,
+      "color": [
+        "#2a2019",
+        "#4a3a2c",
+        "#7a6650"
+      ],
+      "material": "metal"
+    }
+  ]
+}

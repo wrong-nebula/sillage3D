@@ -20,6 +20,7 @@ Sillage 3D is a 3D engine for the browser that draws every Gaussian splat as a b
 - **An MCP server** with eight tools, so an LLM client can list scenes, write and check a scene document, and get renders back as images.
 - **A Node API.** `openSession()` drives the real renderer in headless Chrome.
 - **A viewer** at `/sillage.html` and a studio at `/splat.html`.
+- **A prompting guide** with worked examples for level, character, environment and prop design: [Prompting Sillage](docs/prompting.md).
 
 ### Built to be driven by people and by agents
 
