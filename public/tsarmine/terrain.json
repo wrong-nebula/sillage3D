@@ -1,0 +1,20 @@
+{
+  "source": "Vivero et al. (2026), Tsarmine UAV survey 2025-10-03, CC BY 4.0",
+  "width": 900,
+  "height": 600,
+  "sampleMeters": 0.24002981386611247,
+  "sourceSampleMeters": 0.06000745346652812,
+  "baseMeters": 2416,
+  "heightStepMeters": 0.01,
+  "sourceElevationMeters": [
+    2416.0,
+    2545.65
+  ],
+  "crs": "CH1903+ / LV95, source GeoTIFF definition",
+  "bounds": [
+    2605124.2154286755,
+    1099330.3615401126,
+    2605340.242261155,
+    1099474.3794284323
+  ]
+}

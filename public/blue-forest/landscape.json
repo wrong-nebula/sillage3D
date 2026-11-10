@@ -1,0 +1,293 @@
+{
+  "generator": "LibreTerrain 2026.2.0",
+  "project": "experiments/libreterrain-fracture/blue-forest/hydrology-2049/Forest hydrology 2049.jlterrain",
+  "resolution": 2049,
+  "map_resolution": 1025,
+  "bounds": [
+    -174,
+    -104,
+    18,
+    256
+  ],
+  "channels": [
+    "height_m",
+    "curvature",
+    "flow",
+    "deposition",
+    "perimeter_distance_m",
+    "shore",
+    "water_kind",
+    "water_surface_m"
+  ],
+  "mask_channels": [
+    "slope",
+    "debris",
+    "fractures",
+    "riverbank",
+    "flow_direction",
+    "flow_accumulation",
+    "wear",
+    "shallows"
+  ],
+  "mask_stats": [
+    {
+      "name": "slope",
+      "min": 0.0,
+      "max": 1.0,
+      "nonzero": 302848
+    },
+    {
+      "name": "debris",
+      "min": 0.0,
+      "max": 0.8125581741333008,
+      "nonzero": 96396
+    },
+    {
+      "name": "fractures",
+      "min": 0.0,
+      "max": 1.0,
+      "nonzero": 44426
+    },
+    {
+      "name": "riverbank",
+      "min": 0.0,
+      "max": 0.9977568984031677,
+      "nonzero": 180834
+    },
+    {
+      "name": "flow_direction",
+      "min": 0.0,
+      "max": 1.0,
+      "nonzero": 3955687
+    },
+    {
+      "name": "flow_accumulation",
+      "min": 0.0,
+      "max": 0.21782253682613373,
+      "nonzero": 127713
+    },
+    {
+      "name": "wear",
+      "min": 0.0,
+      "max": 0.08838025480508804,
+      "nonzero": 179794
+    },
+    {
+      "name": "shallows",
+      "min": 0.0,
+      "max": 1.0,
+      "nonzero": 1321388
+    }
+  ],
+  "height_sha256": "87e118ab82750fdac48cf2c7a7e72ad4b5cdd129dfa69aab3a27af452bc21ec9",
+  "height_range": [
+    -11.744330406188965,
+    14.276433944702148
+  ],
+  "sha256": "25b311e2042703ea75bdb1fa0e6767ecc9bca6f8afffd2bf6461fbae21400d76",
+  "build": {
+    "generator": "LibreTerrain",
+    "app_version": "2026.2.0",
+    "world_size_m": [
+      192.0,
+      360.0
+    ],
+    "height_range_m": [
+      -16.0,
+      20.0
+    ],
+    "resolution": [
+      2049,
+      2049
+    ],
+    "cell_size_m": [
+      0.09375,
+      0.17578125
+    ],
+    "seed": 611108,
+    "orientation": "row 0 = world Y 0, column 0 = world X 0",
+    "compute": "cpu",
+    "files": [
+      {
+        "file": "hydraulic_erosion-n_0008_deposition_2049.png",
+        "node": "n_0008",
+        "port": "deposition",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 0.29355535
+      },
+      {
+        "file": "hydraulic_erosion-n_0008_flow_2049.png",
+        "node": "n_0008",
+        "port": "flow",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 0.08316506
+      },
+      {
+        "file": "hydraulic_erosion-n_0008_wear_2049.png",
+        "node": "n_0008",
+        "port": "wear",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 0.08837758
+      },
+      {
+        "file": "thermal_erosion-n_0009_debris_2049.png",
+        "node": "n_0009",
+        "port": "debris",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 0.81255233
+      },
+      {
+        "file": "lakes-n_0010_lakes_2049.png",
+        "node": "n_0010",
+        "port": "lakes",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 1.0
+      },
+      {
+        "file": "lakes-n_0010_shore_2049.png",
+        "node": "n_0010",
+        "port": "shore",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 0.9983778
+      },
+      {
+        "file": "lakes-n_0010_water_surface_2049.exr",
+        "node": "n_0010",
+        "port": "water_surface",
+        "data": "heightfield",
+        "format": "exr32",
+        "encoding": "metres",
+        "data_min": -6.28671,
+        "data_max": 14.276434
+      },
+      {
+        "file": "sea-n_0011_sea_2049.png",
+        "node": "n_0011",
+        "port": "sea",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 1.0
+      },
+      {
+        "file": "sea-n_0011_shallow_2049.png",
+        "node": "n_0011",
+        "port": "shallow",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 1.0
+      },
+      {
+        "file": "sea-n_0011_shoreline_2049.png",
+        "node": "n_0011",
+        "port": "shoreline",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 0.9983778
+      },
+      {
+        "file": "curvature-n_0012_out_2049.png",
+        "node": "n_0012",
+        "port": "out",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 1.0
+      },
+      {
+        "file": "rivers-n_0014_riverbank_2049.png",
+        "node": "n_0014",
+        "port": "riverbank",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 0.99776053
+      },
+      {
+        "file": "slope-n_0016_out_2049.png",
+        "node": "n_0016",
+        "port": "out",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 1.0
+      },
+      {
+        "file": "rock_fracture-n_0017_cracks_2049.png",
+        "node": "n_0017",
+        "port": "cracks",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 1.0
+      },
+      {
+        "file": "rock_fracture-n_0017_out_2049.exr",
+        "node": "n_0017",
+        "port": "out",
+        "data": "heightfield",
+        "format": "exr32",
+        "encoding": "metres",
+        "data_min": -11.74433,
+        "data_max": 14.276434
+      },
+      {
+        "file": "flow-n_0018_accumulation_2049.png",
+        "node": "n_0018",
+        "port": "accumulation",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 0.21781658
+      },
+      {
+        "file": "flow-n_0018_direction_2049.png",
+        "node": "n_0018",
+        "port": "direction",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 0.99999976
+      }
+    ],
+    "unreal": {
+      "xy_scale": 9.375,
+      "z_scale": 7.031357289997711,
+      "z_location": 200.02746623941405
+    }
+  },
+  "water_levels": [
+    0,
+    12.6
+  ],
+  "method": "Fresh 2049 foundations and connected curved drainage -> dunes -> layered hardness -> hydraulic erosion -> routed rivers -> thermal talus -> Lakes -> open Sea -> slope-masked fractures -> curvature and D-infinity flow. Full-resolution height; 1025 material and hydrology maps."
+}

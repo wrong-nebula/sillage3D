@@ -1,0 +1,86 @@
+{
+  "style": "Gentle, whimsical Japanese woodland animation; soft handcrafted character foley, no music.",
+  "processing": "Mono game cues, leading/trailing silence trimmed on one-shots, peak normalization and short anti-click fades. Native fal files retained.",
+  "sounds": [
+    {
+      "name": "footstep",
+      "url": "/tengu-courier/audio/footstep.mp3",
+      "model": "elevenlabs/sound-effects/v3",
+      "request_id": "01a1b00e-e22e-7352-948e-7eb46f4a749f",
+      "prompt": "One light wooden geta sandal footstep: a small rounded hollow wooden tok and a tiny scuff on smooth earth. Charming, light-footed little crow courier. Warm, whimsical hand-crafted foley for a gentle Japanese animated woodland fantasy. Intimate dry recording, soft transients, no music, no speech, no background noise.",
+      "loop": false,
+      "duration": 0.6136054421768707,
+      "trim_seconds": [
+        0.04240362811791383,
+        0.6560090702947846
+      ],
+      "peak": 0.6499999761581421,
+      "rms": 0.05061943504567727,
+      "sha256": "b88d50d7911c689de915a535669be820b5cabd50bfaaf69b41860ba07049ea72"
+    },
+    {
+      "name": "wingbeat",
+      "url": "/tengu-courier/audio/wingbeat-cloth-v2.mp3",
+      "model": "elevenlabs/sound-effects/v3",
+      "request_id": "01a1b05f-a270-7863-a17e-9aa418a7d47c",
+      "prompt": "A single gentle swish of soft linen fabric swept through air, followed by a delicate dry silk flutter. Pure unpitched fabric and air friction. Short, airy, rounded and quiet, with a fast gentle onset and smooth decay. Close dry studio foley. No animals, no birds, no vocal sounds, no caws, no chirps, no speech, no tonal squeaks, no music, no background ambience.",
+      "loop": false,
+      "duration": 0.6057142857142858,
+      "trim_seconds": [
+        0.09997732426303856,
+        0.7056916099773243
+      ],
+      "peak": 0.6499999761581421,
+      "rms": 0.1281048150217703,
+      "sha256": "cf471f5c15d3e55c09d47c58a3bb2e11217c0e3ddb8e30208532d0a1dcee779e"
+    },
+    {
+      "name": "land",
+      "url": "/tengu-courier/audio/land.mp3",
+      "model": "elevenlabs/sound-effects/v3",
+      "request_id": "01a1b00e-f155-77b3-9901-8545b56fc1d0",
+      "prompt": "A small parcel-carrying crow lands on wooden sandals: two close soft wooden tok-tok taps, a cushioned puff and quiet paper packages settling. Gentle weight, no hard crash. Warm, whimsical hand-crafted foley for a gentle Japanese animated woodland fantasy. Intimate dry recording, soft transients, no music, no speech, no background noise.",
+      "loop": false,
+      "duration": 0.4397732426303855,
+      "trim_seconds": [
+        0.15149659863945578,
+        0.5912698412698413
+      ],
+      "peak": 0.6499999761581421,
+      "rms": 0.1023376779854239,
+      "sha256": "a5e22afc02059a7efacd1bfba026ed99834c73768bddf65e58c5fc989ee98b34"
+    },
+    {
+      "name": "parcel",
+      "url": "/tengu-courier/audio/parcel.mp3",
+      "model": "elevenlabs/sound-effects/v3",
+      "request_id": "01a1b00e-f46c-7f93-bee1-cfe302ef3291",
+      "prompt": "Quiet paper-wrapped parcels and soft cotton ropes gently shifting on a small bird courier backpack. Delicate papery rustling, tiny creaks and light cloth friction, one small settling movement. Warm, whimsical hand-crafted foley for a gentle Japanese animated woodland fantasy. Intimate dry recording, soft transients, no music, no speech, no background noise.",
+      "loop": false,
+      "duration": 1.7674603174603174,
+      "trim_seconds": [
+        0.08056689342403628,
+        1.8480272108843538
+      ],
+      "peak": 0.6499999761581421,
+      "rms": 0.015830676022951337,
+      "sha256": "5f9e1e47ad94caae93b217a6cd0db81390f63bd14e8ed9a83de9e3f868529e60"
+    },
+    {
+      "name": "takeoff",
+      "url": "/tengu-courier/audio/takeoff-cloth-v2.mp3",
+      "model": "elevenlabs/sound-effects/v3",
+      "request_id": "01a1b05f-a4b3-7423-b282-ca36e3e4c4b5",
+      "prompt": "Two soft linen fabric swishes through air, a little stronger on the second sweep, followed by delicate dry silk flutter. Pure unpitched cloth and air friction, rounded and gentle. A warm handcrafted animation sound effect, dry close recording. No animals, no birds, no vocal sounds, no caws, no chirps, no speech, no tonal squeaks, no music, no background ambience.",
+      "loop": false,
+      "duration": 1.2315192743764172,
+      "trim_seconds": [
+        0.04820861678004535,
+        1.2797278911564627
+      ],
+      "peak": 0.6499999761581421,
+      "rms": 0.09591173615461061,
+      "sha256": "6d284efe911a696c59fa41c2709bde671dbc35d401baca40b4c815127e1db875"
+    }
+  ]
+}

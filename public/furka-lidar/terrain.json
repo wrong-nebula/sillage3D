@@ -1,0 +1,23 @@
+{
+  "source": "©swisstopo, swissSURFACE3D 2021, classified ground returns",
+  "width": 1000,
+  "height": 900,
+  "sampleMeters": 1.05,
+  "sourceSampleMeters": 0.25,
+  "baseMeters": 2268,
+  "heightStepMeters": 0.01,
+  "sourceElevationMeters": [
+    2268.04,
+    2770.91
+  ],
+  "crs": "EPSG:2056",
+  "verticalDatum": "LN02",
+  "bounds": [
+    2674400.0,
+    1158010.0,
+    2675450.0,
+    1158955.0
+  ],
+  "lidarCoverage": 0.9969508692365835,
+  "demFallback": 0.0012780297304106829
+}

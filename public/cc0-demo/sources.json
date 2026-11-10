@@ -1,0 +1,48 @@
+{
+  "assets": [
+    {
+      "id": "bee",
+      "file": "bee.glb",
+      "title": "Bee — Gobkit Free Animal Pack Vol. 2",
+      "author": "Gobkit",
+      "license": "CC0-1.0",
+      "source": "https://gobkit.itch.io/gobkit-free-animal-pack-vol-2",
+      "download": "https://gobkit.com/freebies/animalB/Bee.glb",
+      "verification": "https://gobkit.com/api/free",
+      "adaptation": "Original rigged GLB; fixed barycentric samples follow its idle clip as Gaussian splats. Added a bounded hovering route.",
+      "sha256": "15dcefc04a7730a613d7a6065af19320891be5930596e9c39d04992765b3cf40",
+      "bytes": 156888,
+      "retrieved": "2026-11-06",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "id": "butterfly",
+      "file": "butterfly.glb",
+      "title": "Butterfly (Animated)",
+      "author": "Čestmír Dammer (CDmir); TinyWorlds",
+      "license": "CC0-1.0",
+      "source": "https://opengameart.org/content/butterfly-animated",
+      "download": "https://opengameart.org/sites/default/files/Butterfly.zip",
+      "adaptation": "Original butterfly.blend and butterfly-skin.png exported with Blender 4.5.15 using scripts/export-cc0-butterfly.py. Original Flying action retained. Textured, alpha-aware samples follow the rig as Gaussian splats. Added a slow hovering route.",
+      "sha256": "de21b30fa043f2841068b6c9b62a5a8be45868f9ffd5d454d2272fcf7e0182c3",
+      "bytes": 168376,
+      "retrieved": "2026-11-06",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "id": "potted-plant",
+      "file": "potted-plant.splat",
+      "title": "Potted Plant Splat",
+      "author": "Poly Haven (source model); DX.GL (Gaussian conversion); Innerscene (format conversion)",
+      "license": "CC0-1.0",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/potted-plant-splat-e5fe29cf",
+      "download": "https://www.innerscene.com/api/library/potted-plant-splat-e5fe29cf/download",
+      "adaptation": "All 51,278 original 32-byte native Gaussian records retained, with a uniform scene scale and 180-degree X rotation. No resampling or decimation. An original procedural tabletop is added.",
+      "sha256": "ebcbe2a0f3bbbd60a5fcb230e918de02708e559e7ad0629d25198933c317a9d6",
+      "bytes": 1640896,
+      "retrieved": "2026-11-06",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
+  "notes": "The bee and butterfly originate as animated CC0 meshes and are rendered exclusively as splats. The plant is a native Gaussian capture. Local Ghibli reference images guide the original procedural gardens and are not included in these CC0 asset licenses."
+}

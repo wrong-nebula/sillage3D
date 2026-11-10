@@ -1,0 +1,111 @@
+{
+  "clips": [
+    {
+      "name": "Idle",
+      "file": "rig-animation_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging",
+      "action_id": 0,
+      "frames": 121,
+      "fps": 30,
+      "duration": 4.0,
+      "root_scale": 1.0
+    },
+    {
+      "name": "Walk",
+      "file": "rig-basic_animations-walking_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging",
+      "action_id": null,
+      "frames": 31,
+      "fps": 30,
+      "duration": 1.0,
+      "root_scale": 1.0
+    },
+    {
+      "name": "Run",
+      "file": "rig-basic_animations-running_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging",
+      "action_id": null,
+      "frames": 20,
+      "fps": 30,
+      "duration": 0.6333333333333333,
+      "root_scale": 1.0
+    },
+    {
+      "name": "Fly",
+      "file": "tengu-courier.blend",
+      "provider": "local",
+      "model": null,
+      "frames": 181,
+      "fps": 30,
+      "duration": 6,
+      "notes": "Earlier flight restored at user request."
+    },
+    {
+      "name": "Jump",
+      "file": "motions-animations-0-animation_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging/multi-animation",
+      "action_id": 466,
+      "frames": 56,
+      "fps": 30,
+      "duration": 1.8333333333333333,
+      "root_scale": 1.0132991893000352
+    },
+    {
+      "name": "Takeoff",
+      "file": "takeoff-fbx_file.fbx",
+      "provider": "fal.ai",
+      "model": "fal-ai/hunyuan-motion",
+      "action_id": null,
+      "frames": 120,
+      "fps": 30,
+      "duration": 3.966666666666667,
+      "root_scale": 1.0627174823619296
+    },
+    {
+      "name": "Land",
+      "file": "land-fbx_file.fbx",
+      "provider": "fal.ai",
+      "model": "fal-ai/hunyuan-motion",
+      "action_id": null,
+      "frames": 120,
+      "fps": 30,
+      "duration": 3.966666666666667,
+      "root_scale": 1.0627174823619296
+    },
+    {
+      "name": "Wave",
+      "file": "motions-animations-1-animation_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging/multi-animation",
+      "action_id": 28,
+      "frames": 161,
+      "fps": 30,
+      "duration": 5.333333333333333,
+      "root_scale": 1.0132991893000352
+    },
+    {
+      "name": "Look around",
+      "file": "motions-animations-2-animation_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging/multi-animation",
+      "action_id": 338,
+      "frames": 236,
+      "fps": 30,
+      "duration": 7.833333333333333,
+      "root_scale": 1.0132991893000352
+    }
+  ],
+  "processing": [
+    "Rest-frame retargeting",
+    "Leg-length root displacement scaling",
+    "Horizontal root travel removed for the studio preview"
+  ],
+  "locally_authored_motion": [
+    "Fly"
+  ],
+  "preferred_flight_restored": true
+}

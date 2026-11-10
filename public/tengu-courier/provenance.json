@@ -1,0 +1,174 @@
+{
+  "source_sha256": "8f115229ff06247cc680a28037056d990b92aafac307963b27149261e5e53f68",
+  "created_date": "2026-11-06",
+  "reference_endpoint": "blackforestlabs/flux-3/klein/edit-image",
+  "geometry_endpoint": "fal-ai/meshy/v7.1/image-to-3d",
+  "geometry_input": "reference-images-0.png",
+  "reference_job": "01a1afc4-e6ba-7a11-8836-7b33b0d70b06",
+  "mesh_job": "01a1afc6-7b4c-7b61-87be-92a6e24a386c",
+  "notes": [
+    "Single-view generation infers unseen surfaces.",
+    "Runtime uses texture-colored mesh surface samples as 3D Gaussian brush splats, not a trained Gaussian reconstruction.",
+    "API credentials are not saved."
+  ],
+  "rigging_endpoint": "fal-ai/meshy/rigging",
+  "rigging_job": "01a1afcd-38dd-7c21-8498-d1eed171382d",
+  "runtime_splats": 42000,
+  "runtime_glb_sha256": "0249bb93176b80c0ebd9ede74de022b83ee04b1d5a8c59126ff40aa06e4abf9c",
+  "animation_source": "Eight fal-supplied clips plus the earlier locally authored Fly animation, restored at user request.",
+  "source_file": "Tengu mountain parcel courier.png",
+  "mesh_triangles": 41987,
+  "bones": 26,
+  "animations": [
+    {
+      "name": "Idle",
+      "file": "rig-animation_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging",
+      "action_id": 0,
+      "frames": 121,
+      "fps": 30,
+      "duration": 4.0,
+      "root_scale": 1.0
+    },
+    {
+      "name": "Walk",
+      "file": "rig-basic_animations-walking_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging",
+      "action_id": null,
+      "frames": 31,
+      "fps": 30,
+      "duration": 1.0,
+      "root_scale": 1.0
+    },
+    {
+      "name": "Run",
+      "file": "rig-basic_animations-running_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging",
+      "action_id": null,
+      "frames": 20,
+      "fps": 30,
+      "duration": 0.6333333333333333,
+      "root_scale": 1.0
+    },
+    {
+      "name": "Fly",
+      "file": "tengu-courier.blend",
+      "provider": "local",
+      "model": null,
+      "frames": 181,
+      "fps": 30,
+      "duration": 6,
+      "notes": "Earlier flight restored at user request."
+    },
+    {
+      "name": "Jump",
+      "file": "motions-animations-0-animation_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging/multi-animation",
+      "action_id": 466,
+      "frames": 56,
+      "fps": 30,
+      "duration": 1.8333333333333333,
+      "root_scale": 1.0132991893000352
+    },
+    {
+      "name": "Takeoff",
+      "file": "takeoff-fbx_file.fbx",
+      "provider": "fal.ai",
+      "model": "fal-ai/hunyuan-motion",
+      "action_id": null,
+      "frames": 120,
+      "fps": 30,
+      "duration": 3.966666666666667,
+      "root_scale": 1.0627174823619296
+    },
+    {
+      "name": "Land",
+      "file": "land-fbx_file.fbx",
+      "provider": "fal.ai",
+      "model": "fal-ai/hunyuan-motion",
+      "action_id": null,
+      "frames": 120,
+      "fps": 30,
+      "duration": 3.966666666666667,
+      "root_scale": 1.0627174823619296
+    },
+    {
+      "name": "Wave",
+      "file": "motions-animations-1-animation_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging/multi-animation",
+      "action_id": 28,
+      "frames": 161,
+      "fps": 30,
+      "duration": 5.333333333333333,
+      "root_scale": 1.0132991893000352
+    },
+    {
+      "name": "Look around",
+      "file": "motions-animations-2-animation_glb.glb",
+      "provider": "fal.ai",
+      "model": "fal-ai/meshy/rigging/multi-animation",
+      "action_id": 338,
+      "frames": 236,
+      "fps": 30,
+      "duration": 7.833333333333333,
+      "root_scale": 1.0132991893000352
+    }
+  ],
+  "runtime_shadow_splats": 1280,
+  "runtime_total_splats": 43282,
+  "shadow": "Blue Gaussian surface splats projected onto the invisible y=0 plane; tight contact marks with height-dependent softness and fading.",
+  "wing_repair": {
+    "outer_wing_vertices_attached_to_parcels_before": 175,
+    "after": 0,
+    "method": "Restore original body weights; exclude feather regions from the parcel mask; normalize wing bone weights."
+  },
+  "controls": {
+    "WASD": "Camera-relative movement",
+    "Space": "Jump on the ground; descend from flight",
+    "Shift": "Hold to run on ground; press in air to toggle flight"
+  },
+  "motion_generation_jobs": {
+    "motions": "01a1afdd-2b2a-7d90-970a-bab8bbe7b00d",
+    "fly": "01a1afdd-2f71-7803-8911-1c09b3750ba4",
+    "takeoff": "01a1afdd-33be-7ba3-be81-f1cb7d3fb433",
+    "land": "01a1afdd-37ce-79e3-84e7-cee87eb9cc59"
+  },
+  "audio": {
+    "manifest": "audio/manifest.json",
+    "models": [
+      "elevenlabs/sound-effects/v3"
+    ],
+    "cues": [
+      "footstep",
+      "wingbeat",
+      "land",
+      "parcel",
+      "takeoff"
+    ],
+    "credentials_saved": false,
+    "vocalizations": "Named call cues removed; original wingbeat/takeoff recordings also contained caws and were replaced with fabric-only fal recordings. Flight-air loop removed for chirping; its regenerated candidate was not clean enough to use.",
+    "revision": "20261106-foley-v2",
+    "replacement_jobs": {
+      "wingbeat": "01a1b05f-a270-7863-a17e-9aa418a7d47c",
+      "takeoff": "01a1b05f-a4b3-7423-b282-ca36e3e4c4b5"
+    }
+  },
+  "head_repair": {
+    "runtime_vertices": 2847,
+    "full_resolution_vertices": 31713,
+    "method": "Rigid head weights with a smooth neck transition; head excluded from parcel mask."
+  },
+  "runtime_motion_layers": [
+    "Eased gait contact IK with short stylized holds, preserved toe roll and soft release on sharp turns.",
+    "Turn-responsive flight bank, limited to 0.2 radians, over restored Fly action.",
+    "Additive damped parcel inertia on acceleration and turns.",
+    "Surface-attached pupil gaze, idle glances, brief blinks with occasional doubles, and two small white eye-highlight splats that follow the pupils and hide under the lids.",
+    "Normalized interruptible clip blends with gait phase matching and speed scaling."
+  ],
+  "runtime_eye_highlights": 2
+}

@@ -1,0 +1,91 @@
+{
+  "generator": "LibreTerrain 2026.2.0",
+  "project": "experiments/libreterrain-fracture/blue-forest/Forest banks.jlterrain",
+  "resolution": 513,
+  "size_m": [
+    32,
+    24
+  ],
+  "channels": [
+    "height_m",
+    "fracture",
+    "fine_curvature",
+    "broad_curvature"
+  ],
+  "height_range": [
+    0.1058829054236412,
+    1.2842108011245728
+  ],
+  "sha256": "a1c4d3ed31baff63d2434f93d046a001fc660055aa48b8fc7f898ca5823132e1",
+  "build": {
+    "generator": "LibreTerrain",
+    "app_version": "2026.2.0",
+    "world_size_m": [
+      32.0,
+      24.0
+    ],
+    "height_range_m": [
+      0.0,
+      2.0
+    ],
+    "resolution": [
+      513,
+      513
+    ],
+    "cell_size_m": [
+      0.0625,
+      0.046875
+    ],
+    "seed": 611066,
+    "orientation": "row 0 = world Y 0, column 0 = world X 0",
+    "compute": "cpu",
+    "files": [
+      {
+        "file": "rock_fracture-n_0006_cracks_513.png",
+        "node": "n_0006",
+        "port": "cracks",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.0,
+        "data_max": 0.99999905
+      },
+      {
+        "file": "rock_fracture-n_0006_out_513.exr",
+        "node": "n_0006",
+        "port": "out",
+        "data": "heightfield",
+        "format": "exr32",
+        "encoding": "metres",
+        "data_min": 0.105882905,
+        "data_max": 1.2842108
+      },
+      {
+        "file": "curvature-n_0007_out_513.png",
+        "node": "n_0007",
+        "port": "out",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.30361843,
+        "data_max": 0.6925168
+      },
+      {
+        "file": "curvature-n_0008_out_513.png",
+        "node": "n_0008",
+        "port": "out",
+        "data": "mask",
+        "format": "png16",
+        "encoding": "0..65535 = 0..1",
+        "data_min": 0.30015063,
+        "data_max": 0.86282223
+      }
+    ],
+    "unreal": {
+      "xy_scale": 6.25,
+      "z_scale": 0.3906309605554284,
+      "z_location": 100.00152590218967
+    }
+  },
+  "adapted_from": "Cliff and talus thermal erosion / curvature workflow; Reef sand dunes workflow"
+}

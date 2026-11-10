@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000"><link rel="icon" href="data:,"><title>Desert Physics Lab · LibreTerrain</title>
+<style>html,body{margin:0;overflow:hidden;background:#000}canvas{display:block;width:100vw;height:100dvh;touch-action:none}#error{position:fixed;inset:45% 10%;color:#ddd;text-align:center;font:16px/1.5 system-ui}</style>
+<style>
+#physics-controls{position:fixed;right:16px;bottom:max(16px,env(safe-area-inset-bottom));max-width:calc(100vw - 64px);max-height:calc(100dvh - 64px);overflow:auto;overscroll-behavior:contain;padding:12px 16px;border-radius:12px;color:#f5f3e9;background:rgba(24,31,32,.88);font:13px/1.5 system-ui;box-shadow:0 2px 12px #0002}
+#physics-controls summary{cursor:pointer;min-height:28px;align-content:center}#physics-controls p{margin:6px 0 10px;color:#d6ded8}#physics-controls .actions{display:flex;flex-wrap:wrap;gap:6px}
+#physics-controls button{font:inherit;color:inherit;background:#ffffff12;border:1px solid #ffffff35;border-radius:6px;min-height:36px;padding:6px 10px;cursor:pointer}#physics-controls button:hover{background:#ffffff25}#physics-controls button:active{transform:scale(.96)}#physics-controls :focus-visible{outline:2px solid #ffe4a8;outline-offset:3px}#physics-controls button:disabled{opacity:.45;cursor:wait}#physics-controls kbd{font:inherit;color:#d6ded8;margin-left:6px}#physics-status{display:block;margin-top:8px;color:#d6ded8}
+@media(pointer:coarse){#physics-controls button{min-height:44px}}@media(prefers-reduced-motion:reduce){#physics-controls button:active{transform:none}}
+@media(max-width:600px){#ground-material{font-size:16px}}
+#rock-grab-guide{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;stroke:#ffe4a8;stroke-width:1.5;fill:none}#rock-grab-guide[hidden]{display:none}.grab-anchor{fill:#ffe4a8;stroke:none}#rock-grab-status{max-width:62ch;color:#ffe4a8!important}
+#motion-blur-control{display:flex;align-items:center;gap:10px;margin-top:10px}#motion-blur-strength{width:120px;accent-color:#ffe4a8}#motion-blur-value{min-width:2ch}
+#material-controls{margin-top:12px;padding-top:10px;border-top:1px solid #ffffff25}#material-controls label{display:inline-flex;gap:10px;align-items:center;min-height:40px}#ground-material{font:inherit;background:#263030;color:#f5f3e9;border:1px solid #ffffff45;border-radius:6px;min-height:40px;padding:6px 10px}#material-status{display:block;margin:6px 0;color:#d6ded8;font-variant-numeric:tabular-nums}
+#physics-inspector{position:fixed;z-index:10;left:16px;top:16px;width:min(330px,calc(100vw - 64px));max-height:calc(100dvh - 110px);overflow:auto;overscroll-behavior:contain;padding:14px 16px;border:1px solid #ffffff30;border-radius:12px;background:rgba(24,31,32,.96);color:#f5f3e9;font:13px/1.45 system-ui}
+#physics-inspector[hidden]{display:none}#physics-inspector h2{margin:0;font-size:16px}#physics-inspector h3{margin:14px 0 6px;font-size:13px}#physics-inspector header{display:flex;justify-content:space-between;align-items:center;gap:12px}#physics-inspector p{color:#d6ded8;margin:8px 0}#physics-inspector button,#physics-inspector select{font:inherit;color:inherit;background:#ffffff12;border:1px solid #ffffff45;border-radius:6px;min-height:40px;padding:6px 10px}#physics-inspector select{width:100%;background:#263030}#physics-inspector summary{cursor:pointer;min-height:40px;align-content:center}#physics-inspector button{cursor:pointer}#physics-inspector button:disabled{opacity:.45;cursor:default}#physics-inspector :focus-visible{outline:2px solid #ffe4a8;outline-offset:3px}#physics-inspector fieldset{border:1px solid #ffffff35;border-radius:6px;margin:10px 0;padding:6px 10px;display:grid;grid-template-columns:1fr 1fr;gap:4px 10px}#physics-inspector label{display:flex;align-items:center;gap:7px;min-height:34px}#physics-inspector input{accent-color:#ffe4a8}#physics-inspector .inspect-actions{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}#physics-inspector pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.55 ui-monospace,monospace;font-variant-numeric:tabular-nums;margin:8px 0}#inspect-details{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:5px 8px;font-variant-numeric:tabular-nums}#inspect-details dt{color:#c5d1cd}#inspect-details dd{margin:0;overflow-wrap:anywhere}#inspect-selection-status{min-height:38px}#physics-inspector .inspect-note{font-size:12px;color:#c5d1cd}
+@media(max-width:600px){#physics-inspector{max-height:42dvh}#physics-inspector select{font-size:16px}}@media(pointer:coarse){#physics-inspector button,#physics-inspector label,#physics-inspector summary{min-height:44px}}
+</style>
+</head>
+<body data-scene="physics-lab">
+<canvas tabindex="0" aria-label="A LibreTerrain physics court. Drag rocks, rope, cloth or plants. Release rocks to throw. Drag empty ground to orbit. Scroll while holding to change distance; Escape drops. Shift-drag always orbits. I inspects physics, period single-steps while inspecting. V views flexible rigs, R resets them. WASD to walk, Space to jump."></canvas>
+<svg id="rock-grab-guide" aria-hidden="true" hidden><line/><circle class="grab-anchor" r="3"/><circle class="grab-target" r="8"/></svg>
+<details id="physics-controls" open>
+<summary>Desert physics lab</summary>
+<p>WASD to walk · Shift to run · Space to jump</p>
+<p>Drag empty ground to orbit · Scroll to zoom · Right-drag to pan</p>
+<p>Alt-click to explode at the pointer · E to blast ahead</p>
+<p>Repeated impacts crack rocks and chip pieces away · Hard impacts shatter them</p>
+<p>P views the water basin · Throw rocks into it or wade through · The wooden float can be grabbed</p>
+<p id="rock-grab-status" role="status">Grab a rock, rope, cloth or plant · Shift-drag always orbits</p>
+<div class="actions" aria-label="Physics actions">
+<button type="button" data-physics="KeyB" disabled>Drop rock <kbd>B</kbd></button>
+<button type="button" data-physics="KeyX" disabled>Break nearby rock <kbd>X</kbd></button>
+<button type="button" data-physics="KeyH" disabled>Toggle fire <kbd>H</kbd></button>
+<button type="button" data-physics="KeyG" disabled>Gust <kbd>G</kbd></button>
+<button type="button" data-physics="KeyN" disabled>Toggle snow <kbd>N</kbd></button>
+<button type="button" data-physics="KeyE" disabled>Explosion <kbd>E</kbd></button>
+<button type="button" data-physics="KeyV" disabled>View flexible rigs <kbd>V</kbd></button>
+<button type="button" data-physics="KeyR" disabled>Reset flexible rigs <kbd>R</kbd></button>
+<button type="button" data-physics="KeyP" disabled>View water <kbd>P</kbd></button>
+<button type="button" data-physics="KeyU" disabled>Drop rock in water <kbd>U</kbd></button>
+<button type="button" id="physics-inspect-toggle" aria-pressed="false" aria-controls="physics-inspector" disabled>Inspect physics <kbd>I</kbd></button>
+<button type="button" id="physics-pause">Pause physics</button>
+<button type="button" id="physics-reset">Reset scene</button>
+</div>
+<div id="material-controls">
+<label for="ground-material">Deposit material <select id="ground-material"><option value="snow">Snow</option><option value="sand">Sand</option><option value="mud">Mud</option></select></label>
+<div class="actions"><button type="button" data-physics="KeyL" disabled>Deposit pile ahead <kbd>L</kbd></button><button type="button" id="materials-clear" disabled>Clear deposits</button></div>
+<p>Snow gathers on rocks and cloth; dragging, impacts and explosions shake it off. N starts accelerated snowfall. Deposits raise the ground, compact under loads and persist as weather changes. Fire melts snow. Piles are limited to 1.2 m of loose material. Volumes are shown before compaction.</p>
+<output id="material-status" aria-live="off">Preparing material field…</output>
+</div>
+<label id="motion-blur-control" for="motion-blur-strength">Object motion blur <input id="motion-blur-strength" type="range" min="0" max="2" step="0.1" value="0.8"><span id="motion-blur-value">0.8</span></label>
+<output id="physics-status" aria-live="off">Loading the LibreTerrain desert basin…</output>
+</details>
+<aside id="physics-inspector" aria-label="Physics inspector" hidden>
+<header><h2 tabindex="-1">Physics inspection</h2><button type="button" id="inspect-close" aria-label="Close physics inspection">Close</button></header>
+<p id="inspect-selection-status" role="status">Click a body to inspect it.</p>
+<p class="inspect-note">Wireframes show the latest solver poses. Blue: fixed · amber: awake · green: sleeping · pink: CCD · red: contact normals.</p>
+<fieldset><legend>Overlay layers</legend>
+<label><input type="checkbox" data-inspect-layer="shapes" checked>Collision shapes</label>
+<label><input type="checkbox" data-inspect-layer="contacts" checked>Contacts</label>
+<label><input type="checkbox" data-inspect-layer="velocities" checked>Velocity vectors</label>
+<label><input type="checkbox" data-inspect-layer="flexible">Flexible constraints</label>
+</fieldset>
+<div class="inspect-actions"><button type="button" id="inspect-pause">Pause</button><button type="button" id="inspect-step">Single step .</button><button type="button" id="inspect-export">Export JSON</button></div>
+<pre id="inspect-metrics" aria-live="off"></pre>
+<details><summary>Subsystem budgets</summary><pre id="inspect-subsystems" aria-live="off"></pre></details>
+<label for="inspect-body">Body or flexible group</label><select id="inspect-body"><option value="">Choose a body or rig</option></select>
+<div class="inspect-actions"><button type="button" id="inspect-previous">Previous [</button><button type="button" id="inspect-next">Next ]</button><button type="button" id="inspect-focus" disabled>Focus selection</button></div>
+<dl id="inspect-details" aria-live="off"></dl>
+<h3>Recent impacts</h3><pre id="inspect-events" aria-live="off"></pre>
+</aside>
+<p id="error" role="alert" hidden>The scene could not load. Reload in a browser with WebGL 2 enabled.</p>
+<script type="module" src="/src/splat/cliffPresentation.js"></script>
+</body>
+</html>

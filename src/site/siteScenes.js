@@ -1,0 +1,21 @@
+export const SITE_ORIGIN='https://sillage3d.vercel.app';
+export const SITE_SCENES=[
+  {id:'fractal',path:'/fractal',label:'Hollow fractal',title:'Hollow fractal · Sillage',
+    description:'A hollow mineral cube with open tunnels repeated at three scales.',image:'fractal.jpg',
+    imageAlt:'An ivory and blue Menger sponge with recursive square openings against a dark background.'},
+  {id:'meadow',path:'/',label:'Summer meadow',title:'Sillage',
+    description:'A living meadow of painted light, water and wind.',image:null,
+    imageAlt:'A painted summer meadow with pools of water and grazing animals.'},
+  {id:'hand',path:'/hand',label:'Thermal hand',title:'Thermal hand · Sillage',
+    description:'A painted thermal hand cradles a luminous orb.',image:'hand.jpg',
+    imageAlt:'An orange, yellow and violet hand curls around a luminous yellow orb against a dark background.'},
+  {id:'bird',path:'/bird',label:'Crow courier',title:'Crow courier · Sillage',
+    description:'A painted crow courier carrying a tall stack of parcels.',image:'bird.jpg',
+    imageAlt:'A black crow courier with a red beak, outstretched wings and a stack of pastel parcels against blue sky.'},
+  {id:'cliff',path:'/cliff',label:'Four seasons',title:'Four seasons · Sillage',
+    description:'A painted cliff and meadow move through four seasons.',image:'cliff.jpg',
+    imageAlt:'A small crow courier crosses a golden meadow beneath a towering painted cliff and drifting birds.'},
+  {id:'coral',path:'/coral',label:'Coral reef',title:'Coral reef · Sillage',
+    description:'A painted underwater reef with growing coral, a swimming clownfish and waves of bioluminescence.',image:'coral.jpg',
+    imageAlt:'Pink and violet branching coral grows above blue rocks and rippled sand, with an orange clownfish in turquoise water.'},
+];

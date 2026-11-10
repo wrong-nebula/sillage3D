@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:,">
+<title>Physics · Sillage</title>
+<style>
+html,body{margin:0;overflow:hidden;background:#000}
+canvas{display:block;width:100vw;height:100dvh;touch-action:none}
+canvas:focus-visible{outline:2px solid #ffe4a8;outline-offset:-3px}
+#physics-hint{position:fixed;inset-inline:16px;bottom:max(4vh,env(safe-area-inset-bottom));margin:0;color:#f8fbff;text-align:center;font:500 12px/1.6 system-ui;text-shadow:0 1px 4px #12304b,0 1px 8px #0008;pointer-events:none}
+#physics-hint>span{display:block}
+#physics-hint .touch-hint{display:none}
+#rock-grab-guide{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;stroke:#ffe4a8;stroke-width:1.5;fill:none}
+#rock-grab-guide[hidden]{display:none}.grab-anchor{fill:#ffe4a8;stroke:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+#error{position:fixed;inset:45% 5% auto;margin:0;color:#fff;text-align:center;font:16px/1.5 system-ui}
+@media(max-width:600px){#physics-hint{font-size:11px;bottom:max(24px,env(safe-area-inset-bottom))}}
+@media(pointer:coarse){#physics-hint .keyboard-hint{display:none}#physics-hint .touch-hint{display:block}}
+</style>
+</head>
+<body data-scene="physics-lab" data-presentation="minimal">
+<canvas tabindex="0" aria-label="Interactive desert physics scene" aria-describedby="physics-instructions"></canvas>
+<svg id="rock-grab-guide" aria-hidden="true" hidden><line/><circle class="grab-anchor" r="3"/><circle class="grab-target" r="8"/></svg>
+<p id="physics-hint" aria-hidden="true">
+<span class="keyboard-hint">Drag to grab &amp; throw · WASD move · Space jump · E blast</span>
+<span class="keyboard-hint">B rock · H fire · G wind · N snow · <span id="physics-material-hint">L Add material</span> · K pause</span>
+<span class="touch-hint">Drag rocks or cloth · Drag empty ground to orbit · Pinch to zoom</span>
+</p>
+<p id="physics-instructions" class="sr-only">Drag rocks, cloth, ropes or plants to grab them; release to throw. Scroll while holding to change distance. Drag empty ground or Shift-drag to orbit, right-drag to pan, and scroll or pinch to zoom. WASD or arrow keys move, Shift runs, Space jumps. Alt-click explodes at the pointer; E blasts ahead. B drops a rock, X breaks a nearby rock, H toggles fire, G adds wind, N toggles snowfall. L deposits sand by default, snow in winter; N switches the deposit material with the season. 1 selects snow, 2 sand, 3 mud for a manual override. V views cloth and ropes, R resets them, P views the pond, U drops a rock in water. C clears deposits. K pauses or resumes; F enters fullscreen. Escape releases a held object.</p>
+<p id="physics-feedback" class="sr-only" role="status"></p>
+<p id="error" role="alert" hidden>The scene could not load. Reload in a browser with WebGL 2 enabled.</p>
+<script type="module" src="/src/splat/cliffPresentation.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "title": "Underwater",
+  "author": "Joseph SARDIN & Axeline T.",
+  "source": "https://bigsoundbank.com/underwater-s3430.html",
+  "download": "https://bigsoundbank.com/UPLOAD/mp3/3430.mp3",
+  "license": "CC0-1.0",
+  "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "description": "Hydrophone recording of a waterfall underwater.",
+  "processing": "56-second circular loop with a 4-second crossfade; high-pass 45 Hz, low-pass 1800 Hz, normalized to -24 LUFS; mono MP3 at 96 kbps.",
+  "runtimeProcessing": "Deep-water EQ before binaural HRTF: 30 Hz high-pass, +4 dB low shelf at 180 Hz, two cascaded 700 Hz low-pass filters."
+}

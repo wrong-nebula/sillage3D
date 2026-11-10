@@ -1,0 +1,9 @@
+Studio Small 09, 1K Radiance HDR
+Author: Sergej Majboroda
+Source: https://polyhaven.com/a/studio_small_09
+Download: https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_09_1k.hdr
+License: CC0 1.0 Universal (public domain)
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Used as the material study's image-based studio lighting and reflections.
+The environment is kept separate from the black presentation background.

@@ -1,0 +1,65 @@
+{
+  "tracks": [
+    {
+      "file": "winter-wind.mp3",
+      "title": "Wind",
+      "creator": "Joseph SARDIN",
+      "source": "https://bigsoundbank.com/wind-s0595.html",
+      "originalDownload": "https://bigsoundbank.com/UPLOAD/mp3/0595.mp3",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verified": "2026-11-07",
+      "sha256": "a1777d10066f2aaed09e6e44fee812258ea0848a23146b44f6457acc916d8607",
+      "notes": "CC0 foley wind used for cold winter air."
+    },
+    {
+      "file": "autumn-rustle.mp3",
+      "title": "Strong wind #4",
+      "creator": "Joseph SARDIN",
+      "source": "https://bigsoundbank.com/vent-fort-4-s0154.html",
+      "originalDownload": "https://bigsoundbank.com/UPLOAD/mp3/0154.mp3",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verified": "2026-11-07",
+      "sha256": "bc40d894c41c4c097c4fe9ad55230a3315403b36504dae4331db33cb94626f99",
+      "notes": "Outdoor wind, leaves and tree rustle."
+    },
+    {
+      "file": "birdsong.mp3",
+      "title": "Birds Waking #3",
+      "creator": "Joseph SARDIN",
+      "source": "https://bigsoundbank.com/wake-birds-3-s0999.html",
+      "originalDownload": "https://bigsoundbank.com/UPLOAD/mp3/0999.mp3",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verified": "2026-11-07",
+      "sha256": "5afea4489221f73fb21016cba1bad865101e4357b015f79080eb8af10b72ad24",
+      "notes": "Countryside dawn chorus, recorded April 23, 2018; excerpt starts at 18 seconds."
+    },
+    {
+      "file": "cicadas.mp3",
+      "title": "Cicadas",
+      "creator": "Clarisse",
+      "source": "https://bigsoundbank.com/cicadas-s3002.html",
+      "originalDownload": "https://bigsoundbank.com/UPLOAD/mp3/3002.mp3",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verified": "2026-11-07",
+      "sha256": "9213a545b612c03956013059716d7156ab03c60d399f6bb37a19f6d3c4bb58d8",
+      "notes": "Very quiet, intermittent summer-only layer."
+    },
+    {
+      "file": "grass-wind.mp3",
+      "title": "Wind in Tall Grass",
+      "creator": "Joseph SARDIN",
+      "source": "https://bigsoundbank.com/wind-in-tall-grass-s0908.html",
+      "originalDownload": "https://bigsoundbank.com/UPLOAD/mp3/0908.mp3",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verified": "2026-11-07",
+      "sha256": "780424fd21506d8e450d3c318ee1378a65327aaf470a867c2578b2b942f4acbc",
+      "notes": "Derived from the existing locally processed CC0 meadow wind recording."
+    }
+  ],
+  "processing": "High/low-pass filtering, level matching to -23 LUFS, excerpts of 46\u201375 seconds, 128kbps stereo MP3. Grass wind retains prior source filtering. Playback uses 3-second overlapping loop ends and seasonal gain crossfades. Cicadas stay at or below 2.6% layer gain and are absent outside summer."
+}

@@ -1,0 +1,21 @@
+{
+  "source": "©swisstopo, swissALTI3D, 2024",
+  "crs": "EPSG:2056",
+  "verticalDatum": "LN02",
+  "bounds": [
+    2674400,
+    1158010,
+    2675450,
+    1158955
+  ],
+  "width": 600,
+  "height": 540,
+  "sampleMeters": 1.75,
+  "sourceSampleMeters": 0.5,
+  "baseMeters": 2268,
+  "heightStepMeters": 0.01,
+  "sourceElevationMeters": [
+    2268.12,
+    2770.76
+  ]
+}

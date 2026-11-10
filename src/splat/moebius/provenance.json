@@ -1,0 +1,35 @@
+{
+  "source": "Moebius RPG/planet",
+  "copiedAt": "2026-11-07",
+  "files": [
+    {
+      "name": "land-flora-genome.js",
+      "sha256": "115a660e2d87da8d3f044c9a36e75658ee6d5eb090a9961b8a8ac43f0b79eec6"
+    },
+    {
+      "name": "land-flora-catalog.js",
+      "sha256": "911add29328a68e7abc5ba5d510ec2c8e1d6359b38cd9b0f3e0b40ff3d387daa"
+    },
+    {
+      "name": "source-flora-geometry.js",
+      "sha256": "d038a78b351e1bfea617f5abe0f282033ef338fd14265ad65fa10eb4682cd655"
+    },
+    {
+      "name": "source-flora-catalog.js",
+      "sha256": "e8ee8243e6c08e2664028ea6dc3b53fb4f7d7284cb0c401821ea6a83e9b0d10d"
+    },
+    {
+      "name": "giant-flora-geometry.js",
+      "sha256": "3e854292086a616e63ae3130e94d635774cabc39b3054c8ad53a1fa5b09e5ac5"
+    },
+    {
+      "name": "land-flora-ecology.js",
+      "sha256": "2699237166d364d7e29bc75c76f3d90ee69ec5eea7aff0f01bdf872e0bd2d0b0"
+    },
+    {
+      "name": "ocean-terrain.js",
+      "sha256": "7173c941a82267984e2fe0b3b706f984c229a45b8043604dc1eea87071dac14f"
+    }
+  ],
+  "notes": "Unmodified local source snapshots. Concept art is original designed flora; ecology is art-directed. Growth adapts flora-film.js rooted allometry, not a biological time simulation."
+}

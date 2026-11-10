@@ -1,0 +1,26 @@
+# Sillage
+
+> A browser-based 3D Gaussian splat engine that draws every splat as a brush mark. It has a JavaScript API for pages and for Node, a command line, and an MCP server. Scenes are built-in ids or plain JSON documents.
+
+Start with AGENTS.md: it covers every command, the scene document format, the render options and the API in one file. `node cli/sillage.mjs guide` prints it, `node cli/sillage.mjs tools` prints the tool definitions as JSON, and `node cli/sillage.mjs schema` prints the scene format as JSON Schema.
+
+## Docs
+
+- [Agent guide](AGENTS.md): command line, MCP, scene documents, render options, JavaScript API, error codes, limits.
+- [Rendering method](docs/gaussian-brush-method.md): how splats become brush marks.
+- [Physics](docs/splat-physics.md): the splat physics lab.
+- [README](README.md): the studios and scenes, in prose.
+
+## Code
+
+- [Page API](src/sillage/index.js): `createSillage(canvas, {scene})`.
+- [Scene documents](src/sillage/scene.js): validate, inspect, compile, schema, templates.
+- [Render options](src/sillage/styles.js): every option with type, range, default.
+- [States](src/sillage/machine.js): the life cycles of an instance, the viewer page and a headless session, as tables.
+- [Node API](cli/index.mjs): `openSession()`, `runTool()`, and the pure modules.
+- [Command line](cli/sillage.mjs) and [tools](cli/lib/tools.mjs).
+
+## Optional
+
+- [Procedural trees](docs/procedural-trees.md)
+- [Third-party notices](docs/third-party-notices.md)

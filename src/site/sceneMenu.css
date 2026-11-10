@@ -1,0 +1,55 @@
+@font-face{
+  font-family:'Sillage Serif';font-style:normal;font-weight:400 500;font-display:swap;
+  src:url('./fonts/CormorantGaramond-latin.woff2') format('woff2');
+}
+.sillage-menu,.sillage-menu-trigger{
+  font-family:'Sillage Serif',Georgia,serif;font-weight:400;color:#f0eee5;
+}
+.sillage-menu{
+  box-sizing:border-box;width:min(680px,calc(100vw - 48px));max-height:calc(100dvh - 48px);
+  padding:22px 28px;border:0;background:transparent;overflow:auto;overscroll-behavior:contain;
+  scrollbar-color:#a9b6a9 #17211b;color-scheme:dark;
+}
+.sillage-menu::backdrop{background:rgba(8,16,13,.84);backdrop-filter:blur(5px)}
+.sillage-menu *{box-sizing:border-box}
+.sillage-menu ::selection{background:#d5ddca;color:#17211b}
+.sillage-menu-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #d6ddcc38}
+.sillage-menu h2{font:400 clamp(1.5rem,3.4vw,2rem)/1.1 'Sillage Serif',Georgia,serif;margin:0;letter-spacing:-.015em}
+.sillage-menu-close{
+  display:flex;align-items:center;gap:12px;flex-shrink:0;min-height:44px;padding:6px 0 6px 12px;
+  background:none;border:0;color:#c8d0c3;font:400 1.125rem/1.2 'Sillage Serif',Georgia,serif;cursor:pointer;
+}
+.sillage-menu-close kbd{font:inherit;color:#f0eee5;border:1px solid #a8b5a866;border-radius:4px;padding:3px 6px}
+.sillage-menu nav{display:flex;flex-direction:column;gap:3px}
+.sillage-menu nav a{
+  display:flex;align-items:baseline;justify-content:space-between;gap:20px;min-height:56px;padding:9px 0;
+  color:#f0eee5;text-decoration:none;font-size:clamp(2rem,5.3vw,3.25rem);line-height:1.15;letter-spacing:-.02em;
+}
+.sillage-menu a:hover>span:first-child,.sillage-menu a[aria-current='page']>span:first-child{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.17em}
+.sillage-menu-current{color:#c8d0c3;font-size:1rem;letter-spacing:0;white-space:nowrap}
+.sillage-menu-footer{margin:28px 0 0;color:#c8d0c3;font-size:1.125rem;line-height:1.5}
+.sillage-menu :focus-visible{outline:2px solid #eef2dc;outline-offset:6px;border-radius:2px}
+.sillage-menu nav a:focus-visible{outline:none;border-radius:0}
+.sillage-menu nav a:focus-visible>span:first-child{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.17em}
+.sillage-menu-trigger{
+  position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));
+  z-index:3;min-width:64px;min-height:44px;padding:8px 14px;border:1px solid #c8d0c33d;border-radius:4px;
+  background:#101b15d9;font-size:1.125rem;cursor:pointer;
+}
+.sillage-menu-trigger:hover{background:#24382c;border-color:#c8d0c380}
+.sillage-menu-trigger:active{background:#314937}
+.sillage-menu-trigger:focus-visible{outline:2px solid #eef2dc;outline-offset:4px}
+@media(max-width:480px){
+  .sillage-menu{padding:14px 8px;width:calc(100vw - 40px)}
+  .sillage-menu nav a{flex-wrap:wrap;gap:2px 12px}
+  .sillage-menu-current{font-size:.9375rem}
+  .sillage-menu-header{gap:12px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .sillage-menu[open] .sillage-menu-content{animation:sillage-menu-in 180ms ease-out}
+  @keyframes sillage-menu-in{from{opacity:.25;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+}
+@media(forced-colors:active){
+  .sillage-menu{background:Canvas;color:CanvasText}
+  .sillage-menu a,.sillage-menu h2,.sillage-menu-current,.sillage-menu-footer,.sillage-menu-close{color:CanvasText}
+}

@@ -1,0 +1,104 @@
+# Sillage 3D publishes only what this file names. Everything else in this
+# folder stays on this machine: other experiments, unfinished work, scenes kept
+# local, reference pictures, build output and deployment tooling.
+#
+# To publish something new, add it to the list below. Nothing is published by
+# default.
+
+/*
+
+!/.gitignore
+!/README.md
+!/CHANGELOG.md
+!/LICENSE.md
+!/AGENTS.md
+!/CLAUDE.md
+!/llms.txt
+!/package.json
+!/package-lock.json
+!/vite.config.js
+
+# Pages: the viewer, the studio, and the six demo scenes.
+!/sillage.html
+!/splat.html
+!/summer.html
+!/hand.html
+!/crow.html
+!/cliff.html
+!/coral.html
+!/physics.html
+!/physics-demo.html
+
+!/cli/
+!/src/
+!/tests/
+!/docs/
+!/public/
+
+# ---- Inside the published folders -------------------------------------------
+
+.DS_Store
+__pycache__/
+
+# Another renderer that shares this folder.
+/src/main.js
+/src/style.css
+/src/engine/
+/src/three/
+/src/scenes/
+/src/films/
+
+# Scenes kept on this machine (see src/splat/studioScenes.js), and the lab page built on one of them.
+/src/splat/*.local.*
+/src/splat/nausicaa.js
+/src/splat/seaRailway*.js
+/src/splat/peachIce.js
+/src/splat/tiledGaussianLab.js
+/public/nausicaa/
+/public/sea-railway/
+/public/peach-ice/
+
+# Unfinished prototypes that depend on code outside this repository.
+/src/splat/Escher*.js
+/src/splat/escher*.js
+
+# Reference pictures and footage the scenes were studied from. Never published.
+/public/reference/
+/public/films/
+/public/brush-references/
+/public/ghibli-references/
+/public/tree-studio/
+/public/**/reference.*
+/public/**/*-reference.*
+
+# The unfinished painting harness's page and working files.
+/src/splat/atelierPresentation.js
+/public/atelier/
+
+# Notes for this machine, and documents that belong to the other renderer.
+/docs/local/
+/docs/film-script.md
+/docs/full-3d-engine.md
+/docs/rendering-research.md
+/docs/source-motion.md
+/docs/procedural-trees.md
+
+# Tests: the suite (`npm test`) and the end-to-end check of the API. The other
+# browser checks and profilers drive the studio on this machine.
+/tests/browser-*.mjs
+!/tests/browser-sillage.mjs
+/tests/profile-*.mjs
+# ...of the other renderer
+/tests/motion.test.js
+/tests/original-film.test.js
+/tests/render-budget.test.js
+/tests/scene-contract.test.js
+/tests/scene-validation.test.js
+/tests/world3d.test.js
+# ...of scenes and work kept local
+/tests/atelier.test.js
+/tests/escher-infinite.test.js
+/tests/nausicaa.test.js
+/tests/plant-lod.test.js
+/tests/spore-drift.test.js
+/tests/sea-railway.test.js

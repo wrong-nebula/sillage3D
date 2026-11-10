@@ -1,0 +1,58 @@
+{
+  "generator": "LibreTerrain 2026.2.0",
+  "biome": "desert",
+  "landform": "smooth dunes",
+  "graph": "experiments/libreterrain-fracture/physics-lab/Physics test ground.jlterrain",
+  "resolution": 1025,
+  "bounds": [
+    -30,
+    -28,
+    60,
+    56
+  ],
+  "heightMin": 0.1527971476316452,
+  "heightMax": 10.453104972839355,
+  "flatCenterBounds": [
+    -11,
+    -8,
+    22,
+    20
+  ],
+  "surfaceChannels": [
+    "flow",
+    "wear",
+    "deposition",
+    "exposedSlope"
+  ],
+  "desertChannels": [
+    "concavity",
+    "convexity",
+    "thermalDebris",
+    "exposedSlope"
+  ],
+  "albedo": "albedo.u8",
+  "albedoFormat": "RGBA8 unshaded material colour from evaluated terrain masks",
+  "materials": [
+    "sand",
+    "sandstone",
+    "dry wash",
+    "talus"
+  ],
+  "build": {
+    "files": [
+      "hydraulic_erosion-n_0004_deposition_1025.exr",
+      "hydraulic_erosion-n_0004_flow_1025.exr",
+      "hydraulic_erosion-n_0004_wear_1025.exr",
+      "thermal_erosion-n_0005_debris_1025.exr",
+      "thermal_erosion-n_0005_height_1025.exr",
+      "slope-n_0006_out_1025.exr",
+      "curvature-n_0007_out_1025.exr",
+      "curvature-n_0008_out_1025.exr",
+      "build.json"
+    ],
+    "message": "",
+    "revision": "217c372fef2c3577",
+    "started_by": "assistant",
+    "state": "finished"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Clownfish",
+  "creator": "Grab3D",
+  "source": "https://grab3d.com/models/animals/clownfish/",
+  "sourceAsset": "https://grab3d.com/dl/clownfish/clownfish-light.glb",
+  "sourceSha256": "bb5de0dc8537cd8e80471868d5b930f2dead6a8dc827a8c88bb66e7ee036fed6",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "origin": "AI-assisted source mesh and textures, cleaned and checked in Blender by Grab3D",
+  "modification": "Area-sampled UV-colored gouache splats with procedural swimming and tail deformation",
+  "samples": 3600
+}

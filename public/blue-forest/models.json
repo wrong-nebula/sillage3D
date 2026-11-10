@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "stride": 9,
+  "encoding": "little-endian float32: position, normal, sRGB",
+  "workflow": "Completed colored references -> direct Meshy 7.1 -> reference-guided PBR -> UV-only transfer to original shape -> area-weighted splats",
+  "assets": [
+    {
+      "slug": "ancient_column",
+      "count": 18000,
+      "radius": 0.007199540698801902,
+      "dimensions": [
+        0.609502372717472,
+        1.0,
+        0.6753259189971742
+      ],
+      "source": "output/blue-forest/models/ancient_column/model_pbr.glb",
+      "sha256": "4ca867fa7c518d48d8d561ce1f2565d895b76867951d46c0179d5afcd0ca3f71",
+      "seed": 611060,
+      "triangles": 307272,
+      "inspection": "output/blue-forest/models/ancient_column/inspection.json"
+    },
+    {
+      "slug": "broad_stump",
+      "count": 10000,
+      "radius": 0.019877783818033228,
+      "dimensions": [
+        1.562278886299911,
+        1.0,
+        1.5568368987601962
+      ],
+      "source": "output/blue-forest/models/broad_stump/model_pbr.glb",
+      "sha256": "ca78711da67c5cffb68fde1344268aa594ddc783a46e3dc41e1cab653165568a",
+      "seed": 611061,
+      "triangles": 312773,
+      "inspection": "output/blue-forest/models/broad_stump/inspection.json"
+    },
+    {
+      "slug": "snapped_trunk",
+      "count": 12000,
+      "radius": 0.009239994657439063,
+      "dimensions": [
+        0.5043910932135279,
+        1.0,
+        0.5901227472644087
+      ],
+      "source": "output/blue-forest/models/snapped_trunk/model_pbr.glb",
+      "sha256": "bb919c6770d3fc2733f388f20cdd8fa3f8e9032f85f519c2b231f0d06792fa07",
+      "seed": 611062,
+      "triangles": 300305,
+      "inspection": "output/blue-forest/models/snapped_trunk/inspection.json"
+    },
+    {
+      "slug": "fallen_log",
+      "count": 12000,
+      "radius": 0.030596084788798196,
+      "dimensions": [
+        3.2605845288837165,
+        1.0,
+        1.6341238628406785
+      ],
+      "source": "output/blue-forest/models/fallen_log/model_pbr.glb",
+      "sha256": "ec00daf5774bf7f67f873ff69cd72b627c27c87b4c791ce3a09902ba4069ca4c",
+      "seed": 611063,
+      "triangles": 306462,
+      "inspection": "output/blue-forest/models/fallen_log/inspection.json"
+    },
+    {
+      "slug": "branch_trunk",
+      "count": 18000,
+      "radius": 0.005684268310191229,
+      "dimensions": [
+        0.28902617276838144,
+        1.0,
+        0.40348842756557585
+      ],
+      "source": "output/blue-forest/waterfall-extension/models/branch_trunk/model_pbr.glb",
+      "sha256": "0d6e2313cb55ff26d64e21ec3a4d1553f6cbf81a12a879092964b3674588b976",
+      "seed": 611064,
+      "triangles": 312160,
+      "inspection": "output/blue-forest/waterfall-extension/models/branch_trunk/inspection.json"
+    },
+    {
+      "slug": "rim_trunk",
+      "count": 18000,
+      "radius": 0.010772323377050442,
+      "dimensions": [
+        0.7703314003395396,
+        1.0,
+        0.8032500852607162
+      ],
+      "source": "output/blue-forest/deep-water-extension/models/rim_trunk/model_pbr.glb",
+      "sha256": "cd0dffdba825ca84f510d1b12ef695e5b1fad0f86db3a4bc5677dd72cb114adf",
+      "seed": 611065,
+      "triangles": 303466,
+      "inspection": "output/blue-forest/deep-water-extension/models/rim_trunk/inspection.json"
+    }
+  ]
+}

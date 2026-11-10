@@ -1,0 +1,12 @@
+Realistic Hand by Dan Ulrich / Blender Studio.
+Blender Studio asset credits also list Paul Kotelevets, Tonatiuh de San Julián, and Julien Kaspar.
+CC0 1.0 Universal — https://creativecommons.org/publicdomain/zero/1.0/
+
+Model source:
+https://commons.wikimedia.org/wiki/File:Hand_realistic_by_Dan_Ulrich_(CC0).stl
+Downloaded 20.13 MB edition:
+https://upload.wikimedia.org/wikipedia/commons/archive/1/1a/20250311192533%21Hand_realistic_by_Dan_Ulrich_%28CC0%29.stl
+Source SHA-256: fde46dd0da4c35a95ea7f3428825e0cbf1c54e152ab79db61ef169e136020eb2
+
+hand.glb is a centered, decimated conversion of the STL with smoothed normals.
+Brushfield samples this mesh into 3D splats and applies its own paint and lighting.

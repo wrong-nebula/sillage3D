@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#16181c"><link rel="icon" href="data:,">
+<title>Sillage</title>
+<meta name="description" content="The Sillage splat engine on one canvas: load a built-in scene or a scene document, and drive it through window.sillage.">
+<!-- sillage-host: the command line looks for this marker to recognise its own page. -->
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#16181c}
+canvas{display:block;width:100vw;height:100dvh;touch-action:none;outline:none}
+canvas:focus-visible{outline:2px solid #e8dcc6;outline-offset:-3px}
+#caption{position:fixed;left:12px;bottom:12px;margin:0;max-width:calc(100vw - 24px);box-sizing:border-box;padding:5px 10px;border-radius:6px;background:rgb(22 24 28 / .72);color:#f2efe6;font:12px/1.4 system-ui,sans-serif;pointer-events:none}
+#caption:empty{display:none}
+#error{position:fixed;inset:38% 10% auto;margin:0;padding:16px 20px;border-radius:8px;background:rgb(22 24 28 / .92);color:#f2efe6;text-align:center;font:15px/1.5 system-ui,sans-serif;white-space:pre-wrap}
+#error[hidden]{display:none}
+</style>
+</head>
+<body>
+<canvas tabindex="0" aria-label="A Sillage scene. Drag to orbit, scroll to zoom. R restores the view."></canvas>
+<p id="caption"></p>
+<p id="error" role="alert" hidden></p>
+<script type="module" src="/src/sillage/host.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+CC0 TECHNOLOGY DEMO ASSETS
+
+All three external demo subjects are offered by their publishers under CC0 1.0 Universal.
+https://creativecommons.org/publicdomain/zero/1.0/
+
+See sources.json for exact sources, adaptations, checksums, and retrieval dates.
+
+Bee — Gobkit Free Animal Pack Vol. 2
+Gobkit
+https://gobkit.itch.io/gobkit-free-animal-pack-vol-2
+License: CC0 1.0 Universal
+
+Butterfly (Animated)
+Čestmír Dammer (CDmir); TinyWorlds
+https://opengameart.org/content/butterfly-animated
+License: CC0 1.0 Universal
+
+Potted Plant Splat
+Poly Haven (source model); DX.GL (Gaussian conversion); Innerscene (format conversion)
+https://www.innerscene.com/tools/library/3d-parts/potted-plant-splat-e5fe29cf
+License: CC0 1.0 Universal
+
+Original butterfly license.txt:
+Author: Čestmír Dammer
+License: CC0
+
+This model was created for wonderful world of Kelgar. (www.kelgar.org)
+Diffuse UV Texture was derived from photo documentation by Rick Hoppmann.
